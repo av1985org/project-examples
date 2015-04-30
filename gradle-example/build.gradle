@@ -10,16 +10,13 @@
 */
 
 buildscript {
-  repositories {
-    maven {
-		url "http://jcenter.bintray.com"
-    }
-	//mavenLocal()
-	
-    dependencies {
-      classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.2.5')
-    }
-  }
+            repositories {
+			jcenter()
+            dependencies {
+                classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '3.0.1')
+
+            }
+         }
 }
 
 import java.text.DateFormat
@@ -28,7 +25,8 @@ import java.text.SimpleDateFormat
 def globalVersion = new Version(currentVersion)
 
 allprojects {
-  apply plugin: 'artifactory'
+  apply plugin: 'com.jfrog.artifactory-upload'
+
   apply plugin: 'idea'
   configure(subprojects.findAll { new File(it.projectDir, 'src').directory }) {
     apply plugin: 'java'
@@ -41,11 +39,15 @@ allprojects {
 
 artifactoryPublish.skip = true
 
+
 subprojects {
   apply plugin: 'maven'
 
   if (project.plugins.hasPlugin('java')) {
-    manifest.mainAttributes(provider: 'gradle')
+    //manifest.mainAttributes(provider: 'gradle')
+	manifest {
+		attributes 'provider': 'gradle'
+	}
     configurations {
       published
     }
@@ -80,7 +82,7 @@ configurations {
 }
 
 
-artifactory {
+artifactoryPublish {
   //contextUrl = 'http://repo.jfrog.org/artifactory'
   contextUrl = 'http://localhost:8081/artifactory'
   publish {
@@ -114,7 +116,7 @@ artifactory {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '1.8'
+  gradleVersion = '2.0'
 }
 
 class Version {
