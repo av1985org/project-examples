@@ -79,6 +79,40 @@ configurations {
   published
 }
 
+
+artifactory {
+  //contextUrl = 'http://repo.jfrog.org/artifactory'
+  contextUrl = 'http://localhost:8081/artifactory'
+  publish {
+    repository {
+      repoKey = 'ForTest' //The Artifactory repository key to publish to
+      username = "${artifactory_user}" //The publisher user name
+      password = "${artifactory_password}" //The publisher password
+      ivy {
+        //Optional section for configuring Ivy publication (when publishIvy = true). Assumes Maven repo layout if If not specified
+        ivyLayout = '[organization]/[module]/ivy-[revision].xml'
+        artifactLayout = '[organization]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]'
+        mavenCompatible = false //Convert any dots in an [organization] layout value to path separators, similar to Maven's groupId-to-path conversion. True if not specified
+      }
+    }
+    defaults {
+      publishConfigs('archives', 'published')
+      properties = ['build.status': "$it.project.status".toString()]
+      publishPom = false //Publish generated POM files to Artifactory (true by default)
+      publishIvy = true //Publish generated Ivy descriptor files to Artifactory (true by default)
+    }
+  }
+  resolve {
+    repository {
+      repoKey = 'jcenter' //The Artifactory (preferably virtual) repository key to resolve from
+      username = "${artifactory_user}" //Optional resolver user name (leave out to use anonymous resolution)
+      password = "${artifactory_password}" //The resolver password
+      maven = true     
+    }
+  }
+
+}
+
 task wrapper(type: Wrapper) {
   gradleVersion = '1.8'
 }
