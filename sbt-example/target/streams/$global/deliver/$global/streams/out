@@ -1,0 +1,5 @@
+[0m[[0minfo[0m] [0m:: delivering :: sbt_example#sbt_example_2.11;1.4-SNAPSHOT :: 1.4-SNAPSHOT :: integration :: Thu Dec 03 15:51:00 IST 2015[0m
+[0m[[0mdebug[0m] [0m	options = status=integration pubdate=Thu Dec 03 15:51:00 IST 2015 validate=true resolveDynamicRevisions=true merge=true resolveId=null pubBranch=null[0m
+[0m[[0mdebug[0m] [0mno default cache defined: set to C:\Users\user\.ivy2\cache[0m
+[0m[[0minfo[0m] [0m	delivering ivy file to C:\Work\pe\project-examples\sbt-example\target\scala-2.11\ivy-1.4-SNAPSHOT.xml[0m
+[0m[[0mdebug[0m] [0m	deliver done (26ms)[0m

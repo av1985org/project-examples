@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>sbt_example</groupId>
+    <artifactId>sbt_example_2.11</artifactId>
+    <packaging>jar</packaging>
+    <description>SBT_Example</description>
+    <version>1.4-SNAPSHOT</version>
+    <name>SBT_Example</name>
+    <organization>
+        <name>sbt_example</name>
+    </organization>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.4.1.3</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>mymavenproxyreleases</id>
+            <name>my-maven-proxy-releases</name>
+            <url>http://localhost:8081/artifactory/sbt-local/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>Artifactory</id>
+            <name>Artifactory</name>
+            <url>http://localhost:8081/artifactory/jcenter/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>

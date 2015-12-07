@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="sbt_example"
+		module="sbt_example_2.11"
+		revision="1.4-SNAPSHOT"
+		conf="runtime"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20151203155057"/>
+	<dependencies>
+		<module organisation="org.apache.derby" name="derby">
+			<revision name="10.4.1.3" status="release" pubdate="20080831144611" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://db.apache.org/derby/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<metadata-artifact status="no" details="" size="2370" time="0" location="C:\Users\user\.ivy2\cache\org.apache.derby\derby\ivy-10.4.1.3.xml" searched="false" origin-is-local="false" origin-location="http://localhost:8081/artifactory/jcenter/org/apache/derby/derby/10.4.1.3/derby-10.4.1.3.pom"/>
+				<caller organisation="sbt_example" name="sbt_example_2.11" conf="compile, runtime" rev="10.4.1.3" rev-constraint-default="10.4.1.3" rev-constraint-dynamic="10.4.1.3" callerrev="1.4-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="derby" type="jar" ext="jar" status="no" details="" size="2440097" time="0" location="C:\Users\user\.ivy2\cache\org.apache.derby\derby\jars\derby-10.4.1.3.jar">
+						<origin-location is-local="false" location="http://localhost:8081/artifactory/jcenter/org/apache/derby/derby/10.4.1.3/derby-10.4.1.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.11.4" status="release" pubdate="20141023183400" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.4/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2685" time="0" location="C:\Users\user\.ivy2\cache\org.scala-lang\scala-library\ivy-2.11.4.xml" searched="false" origin-is-local="false" origin-location="http://localhost:8081/artifactory/jcenter/org/scala-lang/scala-library/2.11.4/scala-library-2.11.4.pom"/>
+				<caller organisation="sbt_example" name="sbt_example_2.11" conf="compile, runtime" rev="2.11.4" rev-constraint-default="2.11.4" rev-constraint-dynamic="2.11.4" callerrev="1.4-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5536783" time="0" location="C:\Users\user\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.4.jar">
+						<origin-location is-local="false" location="http://localhost:8081/artifactory/jcenter/org/scala-lang/scala-library/2.11.4/scala-library-2.11.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
