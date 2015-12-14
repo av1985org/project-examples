@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jfrog.test</groupId>
-        <artifactId>multi</artifactId>
+        <artifactId>MULTI</artifactId>
         <version>3.6-SNAPSHOT</version>
     </parent>
 
-    <artifactId>multi3</artifactId>
+    <artifactId>MULTI3</artifactId>
     <packaging>war</packaging>
     <name>Multi 3</name>
 
