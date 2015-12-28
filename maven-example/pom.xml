@@ -24,6 +24,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+    <groupId>org.jfrog.test</groupId>
+    <artifactId>multi1</artifactId>
+    <version>5.1-SNAPSHOT</version>
+</dependency>
     </dependencies>
 
     <build>
