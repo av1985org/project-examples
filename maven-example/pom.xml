@@ -24,10 +24,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-    <groupId>org.jfrog.test</groupId>
-    <artifactId>multi1</artifactId>
-    <version>5.1-SNAPSHOT</version>
+<dependency>
+    <groupId>me.lessis</groupId>
+    <artifactId>prints_2.10</artifactId>
+    <version>0.1.0</version>
+    <type>pom</type>
 </dependency>
     </dependencies>
 
