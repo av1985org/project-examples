@@ -18,15 +18,11 @@ buildscript {
   repositories {
     jcenter()
   }
-  dependencies {
-        classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '3.2.0')
-    }
 }
 
 allprojects {
   apply plugin: 'java'
   apply plugin: 'maven'
- apply plugin: 'com.jfrog.artifactory'
   group = 'org.jfrog.example.gradle'
   version = '1.0'
   status = 'integration'
@@ -41,11 +37,11 @@ task wrapper(type: Wrapper) {
 }
 
 
-artifactory {
-    clientConfig.setIncludeEnvVars(true)
-    clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new java.util.Date().toString())
+//artifactory {
+//    clientConfig.setIncludeEnvVars(true)
+//    clientConfig.info.addEnvironmentProperty('test.adding.dynVar',new java.util.Date().toString())
 
-    contextUrl = 'http://alexei.artifactoryonline.com/alexei'
+//    contextUrl = 'http://alexei.artifactoryonline.com/alexei'
 
 
-}
+//}
